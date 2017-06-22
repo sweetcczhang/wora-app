@@ -20,7 +20,7 @@
 <ion-list>
   <button
     ion-item
-    *ngFor="let film of (films | async)?.results"
+    *ngFor="let film of (films | async)?.subjects"
     (click)="openDetails(film)"
   >
     {{ film.title }}
