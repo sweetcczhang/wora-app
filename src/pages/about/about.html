@@ -1,21 +1,21 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About WORA-APP
+      即将热映电影
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-<p>
-  An App that Write Once, Run Anywhere.
-</p>
-
-<p>
-  <a href="https://github.com/BUPT-CAD/wora-app">
-    https://github.com/BUPT-CAD/wora-app
-  </a>
-</p>
+  <ion-list>
+    <button
+      ion-item
+      *ngFor="let film of (films | async)?.subjects"
+      (click)="openDetails(film)"
+    >
+      {{ film.title }}
+    </button>
+  </ion-list>
 
 </ion-content>
